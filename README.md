@@ -1,2 +1,1 @@
-# Car-Ergonomics-Analysis-Using-Dual-IMU-Vision-System
-Project Portfolio
+# Car-Ergonomics-Analysis-Using-Dual-IMU-Vision-System Project Portfolio
