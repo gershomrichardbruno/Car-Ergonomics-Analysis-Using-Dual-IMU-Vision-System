@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Ergonomics Analysis | Dual IMU-Vision System</title>
+    <title>Car Ergonomics Analysis | Markerless Motion Analysis System</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -203,15 +203,15 @@
         }
         
         /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, rgba(18, 18, 18, 0.9) 0%, rgba(46, 91, 255, 0.7) 100%);
-            color: var(--light);
-            position: relative;
-            overflow: hidden;
-        }
+        .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--light);
+    line-height: 1.2;
+    opacity: 0;
+    transform: translateY(30px);
+    text-shadow: 0 0 20px rgba(46, 91, 255, 0.5);
+}
         
         .hero-content {
             position: relative;
@@ -1263,7 +1263,7 @@
             }
             
             .hero h1 {
-                font-size: 3rem;
+                font-size: 2.2rem;
             }
             
             .nav-links {
@@ -1288,7 +1288,7 @@
         
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
             }
             
             .hero p {
@@ -1356,8 +1356,10 @@
         <div id="particles-js"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 id="hero-title">Car Ergonomics Analysis Using Dual IMU-Vision System</h1>
-                <p id="hero-description">Real-time biomechanical analysis of car seat entry/exit movements using integrated IMU sensor network and computer vision technology.</p>
+                <h1 id="hero-title" style="opacity:1; transform:none;">Ergonomic Analysis of Lower & Upper Extremity Movement for Semi-Automotive Car Seating Comfort</h1>
+                <p id="hero-description">Developed a real-time marker-less motion analysis system using AI-based pose estimation.
+Validated results against Qualisys motion capture for accurate joint kinematics.
+Provides a low-cost solution for ergonomic and biomechanical analysis..</p>
                 <a href="#methodology" class="btn" id="hero-button">Explore Methodology <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
@@ -1376,31 +1378,32 @@
       <div class="about-text">
         <h3>Real-Time Biomechanical Analysis</h3>
         <p>
-          This research project develops a novel dual-methodology approach that
-          combines multi-sensor IMU networks with computer vision validation to
-          analyze car seat entry/exit movements.
+          This project focuses on developing a marker-less human motion analysis system 
+          using AI-based pose estimation to extract biomechanical parameters from standard 
+          video data. Unlike traditional motion capture systems such as Qualisys, which require 
+          expensive hardware and markers, this approach enables accessible and cost-effective motion analysis.
         </p>
         <p>
-          With the average person spending over 100 minutes daily in vehicles,
-          and millions of car entry/exit cycles performed annually,
-          understanding the biomechanical demands of these transitions is
-          essential for preventing injury and optimizing automotive design.
+          The system captures human movement in the sagittal plane and computes key kinematic
+           parameters including joint angles, velocity, acceleration, and jerk. These parameters
+            are further used to evaluate movement quality and comfort, particularly in seated 
+            posture scenarios.
         </p>
         <p>
-          Traditional ergonomic assessments rely on subjective questionnaires or
-          expensive laboratory-based motion capture systems that cannot be
-          easily deployed in real-world settings. Our approach offers a
-          cost-effective, portable solution for quantitative biomechanical
-          analysis.
+          To ensure reliability, the model’s outputs are validated against Qualisys motion capture
+           data (gold standard) using statistical metrics such as RMSE, MAE, and correlation analysis.
+            Special emphasis is given to angle definition alignment and biomechanical consistency,
+             which are critical for accurate comparison.
         </p>
       </div>
       <div class="about-image">
         <div class="image-container floating-element">
-          <img
-            src="https://www.patcash.co.uk/wp-content/uploads/2011/09/Pat-Cash-biomechanics-what-it-is-and-why-its-important.jpg"
-            alt="Biomechanical Research Illustration"
-            style="width: 500px; height: auto; border-radius: 10px;"
-          />
+      <img
+  src="https://i.imgur.com/PMr59lM.jpeg"
+  referrerpolicy="no-referrer"
+  alt="Car Seat Biomechanical Analysis"
+  style="width: 100%; max-width: 500px; height: auto; border-radius: 10px;"
+/>
         </div>
       </div>
     </div>
@@ -1416,35 +1419,122 @@
                 <h2>Research Methodology</h2>
             </div>
             <div class="methodology-grid">
-                <div class="methodology-card animate-on-scroll">
-                    <div class="methodology-img">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <div class="methodology-content">
-                        <h3>IMU Sensor Network</h3>
-                        <p>Ten strategically placed BMI323 inertial measurement units providing comprehensive 3D kinematic data with real-time analysis and <100ms latency.</p>
-                    </div>
-                </div>
+               <div class="methodology-card animate-on-scroll">
+    <div class="methodology-img" style="background: linear-gradient(135deg, #3b2f6e 0%, #5a3a8a 30%, #c05a2a 100%); position: relative; overflow: hidden;">
+        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" style="z-index:2; position:relative;">
+            <circle cx="36" cy="36" r="28" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <circle cx="36" cy="36" r="18" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+            <circle cx="36" cy="36" r="8" fill="rgba(255,255,255,0.9)"/>
+            <line x1="36" y1="8" x2="36" y2="18" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="36" y1="54" x2="36" y2="64" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="8" y1="36" x2="18" y2="36" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="54" y1="36" x2="64" y2="36" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="16" y1="16" x2="23" y2="23" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="49" y1="49" x2="56" y2="56" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="56" y1="16" x2="49" y2="23" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="23" y1="49" x2="16" y2="56" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+    </div>
+    <div class="methodology-content">
+        <div style="display:inline-block; background:rgba(95,78,185,0.25); border:1px solid rgba(95,78,185,0.5); border-radius:6px; padding:3px 10px; margin-bottom:10px;">
+            <span style="font-size:11px; color:#a89de8; font-weight:600; letter-spacing:0.4px;">Qualisys QTM — Inspired</span>
+        </div>
+        <h3>Markerless Motion Analysis</h3>
+        <p>Purely vision-based pipeline matching the clinical output quality of Qualisys QTM — joint angles, acceleration, jerk, and ISO 2631-1 comfort metrics extracted from a single RGB camera, no markers or wearables required.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px;">
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Landmarks tracked</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">33</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">BlazePose · 3D</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Joints analysed</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">7</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Hip to head</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Signal standard</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">ISO 2631</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">W_k weighted</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Hardware needed</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">Zero</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Camera only</p>
+            </div>
+        </div>
+    </div>
+</div>
                 
                 <div class="methodology-card animate-on-scroll">
-                    <div class="methodology-img">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <div class="methodology-content">
-                        <h3>Computer Vision</h3>
-                        <p>YOLOv8-pose estimation for visual validation and cross-system accuracy verification with real-time pose detection at >30 FPS.</p>
-                    </div>
-                </div>
+    <div class="methodology-img">
+        <i class="fas fa-video"></i>
+    </div>
+    <div class="methodology-content">
+        <div style="display:inline-block; background:rgba(0,194,255,0.15); border:1px solid rgba(0,194,255,0.4); border-radius:6px; padding:3px 10px; margin-bottom:10px;">
+            <span style="font-size:11px; color:#00C2FF; font-weight:600; letter-spacing:0.4px;">Computer Vision Pipeline</span>
+        </div>
+        <h3>Computer Vision</h3>
+        <p>MediaPipe BlazePose extracts 33 3D landmarks per frame with visibility confidence scoring, enabling real-time sagittal plane joint tracking without any physical markers.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px;">
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Frame rate</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">&gt;30 FPS</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Real-time</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Resolution</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">1080p</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Full HD input</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Model</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">Heavy</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">BlazePose tier</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Filter</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">6 Hz</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Butterworth</p>
+            </div>
+        </div>
+    </div>
+</div>
                 
                 <div class="methodology-card animate-on-scroll">
-                    <div class="methodology-img">
-                        <i class="fas fa-people-arrows"></i>
-                    </div>
-                    <div class="methodology-content">
-                        <h3>Human Subjects Validation</h3>
-                        <p>Testing with 15+ subjects across diverse demographics and multiple vehicle types (sedan, SUV, sports car) for comprehensive data collection.</p>
-                    </div>
-                </div>
+    <div class="methodology-img">
+        <i class="fas fa-people-arrows"></i>
+    </div>
+    <div class="methodology-content">
+        <div style="display:inline-block; background:rgba(255,140,0,0.15); border:1px solid rgba(255,140,0,0.4); border-radius:6px; padding:3px 10px; margin-bottom:10px;">
+            <span style="font-size:11px; color:#FF8C00; font-weight:600; letter-spacing:0.4px;">Experimental Validation</span>
+        </div>
+        <h3>Human Subjects Validation</h3>
+        <p>Testing with 15+ subjects across diverse demographics and multiple vehicle types with full biomechanical report generation per session including PDF, CSV, and annotated video.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px;">
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Subjects tested</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">15+</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Diverse demographics</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Vehicle types</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">4</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Sedan·SUV·HB·EV</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Pose quality</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">74.6%</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Mean detection rate</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Report exports</p>
+                <p style="font-size:18px; font-weight:700; color:#fff; margin:0;">3</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">PDF · CSV · Video</p>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -1457,34 +1547,109 @@
             </div>
             <div class="research-grid">
                 <div class="research-card animate-on-scroll">
-                    <div class="research-img">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <div class="research-content">
-                        <h3>System Development</h3>
-                        <p>Develop 10-sensor IMU network using BMI323 sensors and ESP32 microcontroller with real-time data acquisition at 100Hz sampling rate.</p>
-                    </div>
-                </div>
+    <div class="research-img">
+        <i class="fas fa-tasks"></i>
+    </div>
+    <div class="research-content">
+        <div style="display:inline-block; background:rgba(0,194,255,0.15); border:1px solid rgba(0,194,255,0.4); border-radius:6px; padding:3px 10px; margin-bottom:10px;">
+            <span style="font-size:11px; color:#00C2FF; font-weight:600; letter-spacing:0.4px;">Full-Stack System</span>
+        </div>
+        <h3>System Development</h3>
+        <p>Built a complete web-based motion analysis platform using FastAPI backend and React frontend — handling video upload, asynchronous job processing, real-time progress tracking, and structured report delivery.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px;">
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Backend</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">FastAPI</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Python 3.11</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Frontend</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">React</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Vite + Tailwind</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">API endpoints</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">5</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Upload·Analyze·Poll</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Poll interval</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">1.2 s</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Real-time status</p>
+            </div>
+        </div>
+    </div>
+</div>
+                
+               <div class="research-card animate-on-scroll">
+    <div class="research-img">
+        <i class="fas fa-eye"></i>
+    </div>
+    <div class="research-content">
+        <div style="display:inline-block; background:rgba(46,91,255,0.15); border:1px solid rgba(46,91,255,0.4); border-radius:6px; padding:3px 10px; margin-bottom:10px;">
+            <span style="font-size:11px; color:#2E5BFF; font-weight:600; letter-spacing:0.4px;">Pose Estimation</span>
+        </div>
+        <h3>Computer Vision Integration</h3>
+        <p>MediaPipe BlazePose Heavy model extracts 33 landmarks per frame with visibility scoring. Missing landmarks are interpolated using linear methods with a maximum gap limit of 5 consecutive frames.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px;">
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Visibility threshold</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">0.5</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Confidence score</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Max gap fill</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">5</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Consecutive frames</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Annotated output</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">H.264</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">FFmpeg encoded</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Scale calibration</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">m/px</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Reference ruler</p>
+            </div>
+        </div>
+    </div>
+</div>
                 
                 <div class="research-card animate-on-scroll">
-                    <div class="research-img">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="research-content">
-                        <h3>Computer Vision Integration</h3>
-                        <p>Implement YOLOv8-pose estimation for visual validation with One Euro filtering for smooth coordinate tracking.</p>
-                    </div>
-                </div>
-                
-                <div class="research-card animate-on-scroll">
-                    <div class="research-img">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="research-content">
-                        <h3>Biomechanical Analysis</h3>
-                        <p>Develop comprehensive analysis algorithms for movement assessment including joint angle calculations and motion phase detection.</p>
-                    </div>
-                </div>
+    <div class="research-img">
+        <i class="fas fa-chart-line"></i>
+    </div>
+    <div class="research-content">
+        <div style="display:inline-block; background:rgba(255,46,99,0.15); border:1px solid rgba(255,46,99,0.4); border-radius:6px; padding:3px 10px; margin-bottom:10px;">
+            <span style="font-size:11px; color:#FF2E63; font-weight:600; letter-spacing:0.4px;">Signal Processing</span>
+        </div>
+        <h3>Biomechanical Analysis</h3>
+        <p>Multi-stage kinematic pipeline computes velocity, acceleration and jerk via central difference differentiation with cascaded Butterworth filtering at 6, 10 and 12 Hz cutoffs per stage.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:16px;">
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Position filter</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">6 Hz</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">4th order</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Velocity filter</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">10 Hz</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">4th order</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Acc filter</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">12 Hz</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">4th order</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:10px;">
+                <p style="font-size:11px; color:rgba(255,255,255,0.45); margin:0 0 2px;">Jerk threshold</p>
+                <p style="font-size:15px; font-weight:700; color:#fff; margin:0;">5 m/s³</p>
+                <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:2px 0 0;">Discomfort flag</p>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -1496,27 +1661,27 @@
                 <h2>Key Objectives & Outcomes</h2>
             </div>
             <div class="objectives-container">
-                <div class="objectives-info">
-                    <h3>Primary Research Goals</h3>
-                    <div class="objectives-list">
-                        <p><i class="fas fa-check-circle"></i> Develop and validate an integrated IMU-vision system for real-time biomechanical analysis</p>
-                        <p><i class="fas fa-check-circle"></i> Achieve ±5° joint angle accuracy validated against reference measurements</p>
-                        <p><i class="fas fa-check-circle"></i> Create a comprehensive database of movement patterns across diverse populations</p>
-                        <p><i class="fas fa-check-circle"></i> Generate evidence-based recommendations for automotive ergonomic design</p>
-                        <p><i class="fas fa-check-circle"></i> Establish normative databases for comparison and injury risk assessment</p>
-                    </div>
-                </div>
-                <div class="objectives-info">
-                    <h3>Expected Impact</h3>
-                    <div class="objectives-list">
-                        <p><i class="fas fa-arrow-right"></i> Improved vehicle accessibility for elderly and mobility-impaired users</p>
-                        <p><i class="fas fa-arrow-right"></i> Injury prevention through early detection of harmful movement patterns</p>
-                        <p><i class="fas fa-arrow-right"></i> Data-driven seat design optimization for automotive industry</p>
-                        <p><i class="fas fa-arrow-right"></i> Portable assessment capability for ergonomics consulting</p>
-                        <p><i class="fas fa-arrow-right"></i> Evidence-based ergonomic safety standards</p>
-                    </div>
-                </div>
-            </div>
+    <div class="objectives-info">
+        <h3>Primary Research Goals</h3>
+        <div class="objectives-list">
+            <p><i class="fas fa-check-circle"></i> Develop a markerless vision-based system matching Qualisys QTM clinical output quality using a single RGB camera</p>
+            <p><i class="fas fa-check-circle"></i> Extract 33 BlazePose landmarks and compute 7-joint kinematic profiles including hip, knee, ankle, shoulder, elbow, wrist and head</p>
+            <p><i class="fas fa-check-circle"></i> Implement ISO 2631-1 frequency-weighted acceleration metrics and composite comfort index per joint</p>
+            <p><i class="fas fa-check-circle"></i> Build a full-stack web application with asynchronous video processing, real-time progress polling and automated PDF/CSV report generation</p>
+            <p><i class="fas fa-check-circle"></i> Validate system across 15+ human subjects with mean pose detection quality of 74.6%</p>
+        </div>
+    </div>
+    <div class="objectives-info">
+        <h3>Expected Impact</h3>
+        <div class="objectives-list">
+            <p><i class="fas fa-arrow-right"></i> Zero-hardware ergonomic screening — eliminates need for expensive marker-based motion capture systems</p>
+            <p><i class="fas fa-arrow-right"></i> Clinically interpretable comfort reports with RMS acceleration, peak jerk and comfort index downloadable as PDF</p>
+            <p><i class="fas fa-arrow-right"></i> Accessible biomechanical analysis deployable via any browser without specialised lab setup</p>
+            <p><i class="fas fa-arrow-right"></i> Data-driven automotive seat design optimization using objective kinematic evidence across diverse populations</p>
+            <p><i class="fas fa-arrow-right"></i> Open pathway for ergonomic safety standard development using vision-based comfort benchmarking</p>
+        </div>
+    </div>
+</div>
         </div>
     </section>
 
@@ -1842,7 +2007,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Car Ergonomics Analysis</h3>
-                    <p>Real-time biomechanical analysis of car seat entry/exit movements using integrated IMU sensor network and computer vision technology.</p>
+                    <p>Markerless biomechanical analysis of automotive seating comfort using AI-based pose estimation, 
+                        kinematic signal processing and ISO 2631-1 comfort metrics.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
@@ -1867,7 +2033,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Car Ergonomics Analysis Research. All rights reserved.</p>
+                <p>&copy; 2026 Car Ergonomics Analysis Research. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -2006,9 +2172,16 @@
             });
             
             // Hero text animation
-            setTimeout(() => {
-                document.getElementById('hero-title').style.animation = 'fadeIn 1s forwards';
-            }, 300);
+           setTimeout(() => {
+    const title = document.getElementById('hero-title');
+    title.style.opacity = '0';
+    title.style.transform = 'translateY(30px)';
+    title.style.transition = 'opacity 1s ease, transform 1s ease';
+    setTimeout(() => {
+        title.style.opacity = '1';
+        title.style.transform = 'translateY(0)';
+    }, 50);
+}, 300);
             
             setTimeout(() => {
                 document.getElementById('hero-description').style.animation = 'fadeIn 1s forwards';
